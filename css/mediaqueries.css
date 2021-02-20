@@ -1,0 +1,582 @@
+@media (max-width: 1645px) {
+
+  .container {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media (max-width: 1330px) {
+
+  .header {
+    position: sticky;
+    font-size: 18px;
+  }
+
+  .header__container {
+    padding-top: 28px;
+  }
+
+  .burger {
+    display: inline-block;
+    position: relative;
+    width: 36px; height: 28px;
+    overflow: hidden;
+    margin-right: auto;
+    cursor: pointer;
+    z-index: 21;
+  }
+
+  .burger::before,
+  .burger::after,
+  .burger__item {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 3px;
+    background: var(--burger-color);
+  }
+
+  .burger::before {
+    top: 2px;
+    width: 100%;
+    transition: transform .3s ease;
+  }
+
+  .burger::after {
+    bottom: 0;
+    width: 24px;
+    transition: transform .3s ease;
+  }
+
+  .burger__item {
+    top: 14px;
+    width: 28.2px;
+    transition: transform .3s ease;
+  }
+
+  .burger-active::before,
+  .burger-active::after {
+    width: 100%;
+  }
+
+  .burger-active::before {
+    top: 12px;
+    transform: rotate(45deg);
+  }
+
+  .burger-active::after {
+    bottom: 12px;
+    transform: rotate(-45deg);
+  }
+
+  .burger-active > .burger__item {
+    transform: translate(-150%, -30px) rotate(45deg);
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  .header-nav {
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+    padding: 109px 40px 51px;
+    background: rgba(0, 0, 0, 0.9);
+    transform: translateX(-200%);
+    transition: transform .3s ease;
+  }
+
+  .header-nav__list {
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 5px 0 25px 3px;
+  }
+
+  .header-nav__item:not(:last-child) {
+    margin: 0 0 37px 0;
+  }
+
+  .header-nav__link {
+    font-size: 24px;
+  }
+
+  .header-nav__link:hover {
+    color: var(--font-color-white);
+  }
+
+  .header-nav__link:active {
+    color: var(--click-link-color);
+  }
+
+  .nav-active {
+    transform: translateX(0);
+    z-index: 20;
+  }
+
+  .header-nav__account {
+    margin-left: 9px;
+    margin-top: 115px;
+  }
+
+  .account__link {
+    padding: 15px 100px;
+    border: 2px solid #9D5CD0;
+    border-radius: 100px;
+  }
+
+  .account__link::before {
+    left: 82px;
+    top: 21px;
+  }
+
+  .account__link::after {
+    left: 82px;
+    top: 22.3px;
+  }
+
+  .search_top {
+    display: inline-block;
+    margin: 0 0 0 auto;
+    background-size: 83% 83%;
+    transition: opacity .3s ease;
+    z-index: 10;
+  }
+
+  .search_top-inactive {
+    opacity: 0;
+    z-index: 0;
+  }
+
+  .account__link:hover {
+    color: var(--font-color-white);
+  }
+
+  .account__link:hover::before,
+  .account__link:hover::after {
+    background-color: var(--font-color-white);
+  }
+
+  .account__link:focus {
+    outline: none;
+    box-shadow: inset 0 0 0 3px var(--btn-active);
+  }
+
+  .account__link:active {
+    color: var(--click-link-color);
+  }
+
+  .account__link:active::before,
+  .account__link:active::after {
+    background-color: var(--click-link-color);
+  }
+
+  .header__bottom {
+    position: absolute;
+    right: 0; top: 0;
+    background: transparent;
+  }
+
+  .header__container_bottom {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .search-form {
+    position: absolute;
+    right: 55px; top: 34px;
+    background: #18171B;
+    opacity: 0;
+    transition: opacity .3s ease;
+  }
+
+  .search-form-active {
+    opacity: 1;
+    z-index: 21;
+  }
+
+  .search-field::placeholder {
+    font-size: 0;
+  }
+
+  .search-field:hover + .search {
+    background: url("../img/header+hero/1920/svg/search.svg") center center no-repeat;
+  }
+
+  .search-field:hover::placeholder {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.85);
+  }
+
+  .search-field:active + .search {
+    background: url("../img/header+hero/1920/svg/search-active.svg") center center no-repeat;
+  }
+
+  .search-field:active::placeholder {
+    border-bottom: 1px solid rgba(194, 131, 243, 1);
+  }
+
+  .hero {
+    align-items: flex-start;
+    min-height: 669px;
+  }
+
+  .hero__block {
+    width: 660px;
+    padding-top: 114px;
+  }
+
+  .hero__title {
+    width: 600px;
+    margin: 0 0 12px 0;
+  }
+
+  .hero__text {
+    margin: 0 0 160px 0;
+  }
+
+  @keyframes change-slide {
+    from {
+      background: url("../img/header+hero/1024/png/birmingham-museums-trust-1.png") center center no-repeat;
+    }
+
+    50% {
+      background: url("../img/header+hero/1024/png/birmingham-museums-trust-2.png") center center no-repeat;
+    }
+
+    to {
+      background: url("../img/header+hero/1024/png/birmingham-museums-trust-3.png") center center no-repeat;
+    }
+  }
+
+  .slide {
+    background: url("../img/header+hero/1024/png/birmingham-museums-trust-1.png") center center no-repeat;
+  }
+
+  .btn:hover {
+    box-shadow: none;
+  }
+
+  .btn:active {
+    background-color: var(--btn-active);
+    box-shadow: inset 0 0 0 3px var(--btn-hover);
+  }
+
+  .about {
+    margin: 86px 0 80px;
+  }
+
+  .about__title {
+    margin: 0 0 20px 0;
+  }
+
+  .about__text {
+    width: 100%;
+  }
+}
+
+@media (max-width: 993px) {
+
+  .header__bottom {
+    width: 100%;
+    height: 100%;
+  }
+
+  .search-form {
+    right: 6.8%;
+    top: 0;
+    width: 87.3vw;
+    padding: 38px 0 25px;
+    background-color: #000;
+  }
+
+  .search-field {
+    width: 100%;
+  }
+
+  .search-btn {
+    background-position-y: top;
+    background-size: 85% 80%;
+  }
+
+  .close-btn {
+    order: 3;
+    position: relative;
+    width: 43px;
+    height: 30px;
+    margin-left: 11px;
+    cursor: pointer;
+  }
+
+  .close-btn::before,
+  .close-btn::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    width: 100%; height: 3.5px;
+    background-color: var(--background-color-white);
+    transition: transform .3s ease;
+  }
+
+  .close-btn::before {
+    top: 7px;
+    transform: rotate(45deg);
+  }
+
+  .close-btn::after {
+    bottom: 19.5px;
+    transform: rotate(-45deg);
+  }
+
+  .close-btn:focus,
+  .close-btn:active {
+    outline: 2px solid var(--outline-color);
+  }
+
+  @keyframes change-slide {
+    from {
+      background: url("../img/header+hero/768/png/birmingham-museums-trust-1.png") center center no-repeat;
+    }
+
+    50% {
+      background: url("../img/header+hero/768/png/birmingham-museums-trust-2.png") center center no-repeat;
+    }
+
+    to {
+      background: url("../img/header+hero/768/png/birmingham-museums-trust-3.png") center center no-repeat;
+    }
+  }
+
+  .slide {
+    background: url("../img/header+hero/768/png/birmingham-museums-trust-1.png") center center no-repeat;
+  }
+
+  .hero__block {
+    width: 100%;
+  }
+
+  .hero__title {
+    width: 90%;
+    font-size: 9.35vw;
+  }
+
+  .hero__text {
+    font-size: 2.34vw;
+  }
+}
+
+@media (max-width: 578px) {
+
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .header__container {
+    padding-top: 12px;
+    padding-bottom: 11px;
+  }
+
+  .burger {
+    width: 20px;
+    height: 15px;
+  }
+
+  .burger::before, .burger::after, .burger__item {
+    height: 2px;
+  }
+
+  .burger::before {
+    top: -1px;
+  }
+
+  .burger__item {
+    top: 6px;
+    width: 16px;
+  }
+
+  .burger::after {
+    width: 13px;
+  }
+
+  .burger-active {
+    width: 15px;
+    height: 15px;
+  }
+
+  .burger-active::before, .burger-active::after {
+    left: 0;
+  }
+
+  .burger-active::before {
+    top: 6px;
+    width: 100%;
+  }
+
+  .burger-active::after {
+    bottom: 7px;
+    width: 100%;
+  }
+
+  .header-nav {
+    padding: 46px 6px 15px;
+  }
+
+  .header-nav__item:not(:last-child) {
+    margin: 0 0 12px 0;
+  }
+
+  .header-nav__link {
+    font-size: 16px;
+  }
+
+  .header-nav__account {
+    margin-left: 5px;
+    margin-top: 21px;
+  }
+
+  .account__link {
+    padding: 10px 32px 10px 45px;
+    font-size: 12px;
+    border: 2px solid #9D5CD0;
+    border-radius: 100px;
+  }
+
+  .account__link::before {
+    left: 31px;
+    top: 13px;
+    width: 9px;
+    height: 9px;
+  }
+
+  .account__link::after {
+    left: 31px;
+    top: 14.6px;
+    width: 6px;
+    height: 6px;
+  }
+
+  .account__link:hover::after {
+    width: 11px;
+    transform: translateX(-4px);
+  }
+
+  .search-form {
+    right: 0;
+    width: 100vw;
+    padding: 30px 0 9px;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(40px);
+  }
+
+  .search-btn {
+    margin-left: 52px;
+    margin-right: 0;
+    padding: 18px 0 18px 18px;
+    background-position-y: center;
+    background-size: 82% 50%;
+  }
+
+  .search-field {
+    width: 58%;
+    font-size: 14px;
+    padding-left: 5px;
+  }
+
+  .search-field:hover + .search {
+    background-size: 82% 50%;
+  }
+
+  .close-btn {
+    width: 17px;
+    height: 15px;
+    margin-left: 16px;
+  }
+
+  .close-btn::before, .close-btn::after {
+    left: 13px;
+    height: 2px;
+  }
+
+  .close-btn::before {
+    top: -20px;
+  }
+
+  .close-btn::after {
+    bottom: 32.5px;
+  }
+
+  .search_top {
+    padding: 0;
+    background-size: 75% 78%;
+  }
+
+  .hero {
+    min-height: 310px;
+  }
+
+  @keyframes change-slide {
+    from {
+      background: url("../img/header+hero/320/png/birmingham-museums-trust-1.png") center center no-repeat;
+    }
+
+    50% {
+      background: url("../img/header+hero/320/png/birmingham-museums-trust-2.png") center center no-repeat;
+    }
+
+    to {
+      background: url("../img/header+hero/320/png/birmingham-museums-trust-3.png") center center no-repeat;
+    }
+  }
+
+  .slide {
+    background: url("../img/header+hero/320/png/birmingham-museums-trust-1.png") center center no-repeat;
+  }
+
+  .hero__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 34px;
+  }
+
+  .hero__title {
+    text-align: center;
+    margin: 0 0 13px 0;
+    font-size: 32px;
+  }
+
+  .hero__text {
+    width: 265px;
+    text-align: center;
+    margin: 0 0 50px 0;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+  }
+
+  .btn {
+    padding: 11px 19px;
+    font-size: 12px;
+  }
+
+  .about {
+    margin: 54px 0 80px;
+  }
+
+  .about__title {
+    margin: 0 0 12px 0;
+    font-size: 28px;
+  }
+
+  .about__text {
+    font-size: 14px;
+    line-height: 28px;
+  }
+}

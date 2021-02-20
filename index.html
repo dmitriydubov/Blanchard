@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <title>Blanchard</title>
+  <link rel="stylesheet" href="css/simplebar.min.css">
+  <link rel="stylesheet" href="css/choices.min.css">
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/normalise.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/mediaqueries.css">
+  <script defer src="js/simplebar.min.js"></script>
+  <script defer src="js/choices.min.js"></script>
+  <script defer src="js/swiper-bundle.min.js"></script>
+  <script defer src="js/script.js"></script>
+  <noscript>
+    <link rel="stylesheet" href="css/noscript.css">
+  </noscript>
+</head>
+<body class="index">
+  <header class="header">
+    <div class="header__top">
+      <div class="container header__container">
+        <div class="burger">
+          <div class="burger__item"></div>
+        </div>
+        <picture class="logo header__logo">
+          <source srcset="img/header+hero/1920/svg/logo.svg" media="(min-width: 1331px)">
+          <source srcset="img/header+hero/1024/svg/logo_1024.svg" media="(min-width: 993px) and (max-width: 1330px)">
+          <source srcset="img/header+hero/768/svg/logo_768.svg" media="(min-width: 579px) and (max-width: 992px)">
+          <source srcset="img/header+hero/320/svg/logo_320.svg" media="(max-width: 578px)">
+          <img src="img/header+hero/1920/svg/logo.svg" alt="Логотип компании">
+        </picture>
+        <nav class="header-nav">
+          <ul class="header-nav__list">
+            <li class="header-nav__item">
+              <a class="header-nav__link" href="#">О нас</a>
+            </li>
+            <li class="header-nav__item">
+              <a class="header-nav__link" href="#">Галерея</a>
+            </li>
+            <li class="header-nav__item">
+              <a class="header-nav__link" href="#">Каталог</a>
+            </li>
+            <li class="header-nav__item">
+              <a class="header-nav__link" href="#">События</a>
+            </li>
+            <li class="header-nav__item">
+              <a class="header-nav__link" href="#">Издания</a>
+            </li>
+            <li class="header-nav__item">
+              <a class="header-nav__link" href="#">Проекты</a>
+            </li>
+            <li class="header-nav__item">
+              <a class="header-nav__link" href="#">Контакты</a>
+            </li>
+            <li class="account header-nav__account">
+              <a class="account__link" href="#">Войти</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="search search_top" type="button" aria-label="Кнопка найти"></button>
+      </div>
+    </div>
+    <div class="header__bottom">
+      <div class="container header__container header__container_bottom">
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <select class="select" id="select1" name="art" aria-label="Выпадающий список. Выбор художника" tabindex="0">
+                <option class="menu__option" value="">Реализм</option>
+                <option class="menu__option" value="Тинторетто">Тинторетто</option>
+                <option class="menu__option" value="Фридрих">Фридрих</option>
+                <option class="menu__option" value="Леонардо">Леонардо</option>
+                <option class="menu__option" value="Верроккьо">Верроккьо</option>
+                <option class="menu__option" value="Тинторетто">Тинторетто</option>
+                <option class="menu__option" value="Фридрих">Фридрих</option>
+                <option class="menu__option" value="Леонардо">Леонардо</option>
+                <option class="menu__option" value="Верроккьо">Верроккьо</option>
+              </select>
+            </li>
+            <li class="menu__item">
+              <select class="select" id="select2" name="art" aria-label="Выпадающий список. Выбор художника">
+                <option class="menu__option" value="">Импрессионизм</option>
+                <option class="menu__option" value="Тинторетто">Тинторетто</option>
+                <option class="menu__option" value="Фридрих">Фридрих</option>
+                <option class="menu__option" value="Леонардо">Леонардо</option>
+                <option class="menu__option" value="Верроккьо">Верроккьо</option>
+                <option class="menu__option" value="Тинторетто">Тинторетто</option>
+                <option class="menu__option" value="Фридрих">Фридрих</option>
+                <option class="menu__option" value="Леонардо">Леонардо</option>
+                <option class="menu__option" value="Верроккьо">Верроккьо</option>
+              </select>
+            </li>
+            <li class="menu__item">
+              <select class="select" id="select3" name="art" aria-label="Выпадающий список. Выбор художника">
+                <option class="menu__option" value="">Постимпрессионизм</option>
+                <option class="menu__option" value="Тинторетто">Тинторетто</option>
+                <option class="menu__option" value="Фридрих">Фридрих</option>
+                <option class="menu__option" value="Леонардо">Леонардо</option>
+                <option class="menu__option" value="Верроккьо">Верроккьо</option>
+                <option class="menu__option" value="Тинторетто">Тинторетто</option>
+                <option class="menu__option" value="Фридрих">Фридрих</option>
+                <option class="menu__option" value="Леонардо">Леонардо</option>
+                <option class="menu__option" value="Верроккьо">Верроккьо</option>
+              </select>
+            </li>
+            <li class="menu__item">
+              <select class="select" id="select4" name="art" aria-label="Выпадающий список. Выбор художника">
+                <option class="menu__option" value="">Авангард</option>
+                <option class="menu__option" value="Тинторетто">Тинторетто</option>
+                <option class="menu__option" value="Фридрих">Фридрих</option>
+                <option class="menu__option" value="Леонардо">Леонардо</option>
+                <option class="menu__option" value="Верроккьо">Верроккьо</option>
+                <option class="menu__option" value="Тинторетто">Тинторетто</option>
+                <option class="menu__option" value="Фридрих">Фридрих</option>
+                <option class="menu__option" value="Леонардо">Леонардо</option>
+                <option class="menu__option" value="Верроккьо">Верроккьо</option>
+              </select>
+            </li>
+            <li class="menu__item">
+              <select class="select" id="select5" name="art" aria-label="Выпадающий список. Выбор художника">
+                <option class="menu__option" value="">Футуризм</option>
+                <option class="menu__option" value="Тинторетто">Тинторетто</option>
+                <option class="menu__option" value="Фридрих">Фридрих</option>
+                <option class="menu__option" value="Леонардо">Леонардо</option>
+                <option class="menu__option" value="Верроккьо">Верроккьо</option>
+                <option class="menu__option" value="Тинторетто">Тинторетто</option>
+                <option class="menu__option" value="Фридрих">Фридрих</option>
+                <option class="menu__option" value="Леонардо">Леонардо</option>
+                <option class="menu__option" value="Верроккьо">Верроккьо</option>
+              </select>
+            </li>
+          </ul>
+        </nav>
+        <form class="search-form" method="get">
+          <input class="search-field" placeholder="Поиск по сайту" type="search" aria-label="Поиск по сайту">
+          <button class="search search-btn" id="search" type="button" aria-label="Кнопка найти"></button>
+          <div class="close-btn" aria-label="Закрыть форму поиска" tabindex="0"></div>
+        </form>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="hero">
+      <div class="image-container">
+        <div class="slide"></div>
+      </div>
+      <div class="container hero-container">
+        <div class="hero__block">
+          <h1 class="hero__title">Прикоснитесь к прекрасному</h1>
+          <p class="hero__text">Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.</p>
+          <div class="btn-container">
+            <a class="btn" href="#">Подписаться на рассылку</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="about">
+      <div class="container">
+        <h2 class="title about__title">О нас</h2>
+        <p class="about__text">Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого участника как способного принимать собственные решения касаемо распределения внутренних резервов и&nbsp;ресурсов. Не&nbsp;следует, однако, забывать, что высококачественный прототип будущего проекта влечет за&nbsp;собой процесс внедрения и&nbsp;модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных исследований создаёт необходимость включения в&nbsp;производственный план целого ряда внеочередных мероприятий с&nbsp;учётом комплекса распределения внутренних резервов и&nbsp;ресурсов. В&nbsp;рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность среди определенных слоев населения, а&nbsp;значит, должны быть разоблачены.</p>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+
+  </footer>
+</body>
+</html>
