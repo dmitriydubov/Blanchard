@@ -455,6 +455,7 @@ input::-webkit-search-results-decoration {
 
 .choices__list--dropdown .choices__item--selectable:not([data-id = "1"]) {
   position: relative;
+  font-size: 13px;
   transition: box-shadow .3s ease;
 }
 
