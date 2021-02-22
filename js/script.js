@@ -38,7 +38,13 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.choices__list--dropdown').forEach(el => {
     const scrollbar = el.children;
     new SimpleBar(scrollbar[0]);
-   /* new SimpleBar(el);*/
+  });
+
+  /*gallery slider*/
+
+  const swiper = new Swiper('.swiper-container', {
+    speed: 400,
+    spaceBetween: 0,
   });
 });
 
