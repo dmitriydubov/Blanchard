@@ -36,12 +36,15 @@
   --burger-color: #fff;
   --hover-link-color: #C283F3;
   --click-link-color: #7943A4;
+  --search-icon-color: #fff;
+  --search-icon-hover: #C283F3;
   --click-button-color: #7943A4;
   --btn-hover: #D1A9F0;
   --btn-active: #7943A4;
   --outline-color: #7943A4;
-  --menu-scrollbar-track-color: #9D5CD0;
-  --menu-scrollbar-color: #000;
+  --menu-scrollbar-track-color: #000;
+  --menu-scrollbar-color: #fff;
+  --scrollbar-active: #9D5CD0;
 }
 
 html, .index {
@@ -136,7 +139,7 @@ input::-webkit-search-results-decoration {
 }
 
 .header__logo {
-  margin-right: 9.1vw;
+  margin-right: auto;
 }
 
 .header-nav__list {
@@ -212,21 +215,23 @@ input::-webkit-search-results-decoration {
 
 .search {
   order: 1;
-  width: 22px; height: 22px;
   margin-right: 5px;
-  padding: 18px;
-  background: url("../img/header+hero/1920/svg/search.svg") center center no-repeat;
+  background-color: transparent;
   cursor: pointer;
+}
+
+.search-icon_bottom {
+  width: 22px; height: 22px;
+}
+
+.search-icon__el-1,
+.search-icon__el-2 {
+  fill: var(--search-icon-color);
+  transition: fill .3s ease;
 }
 
 .search_top {
   display: none;
-}
-
-.search_top:focus,
-.search_top:active {
-  background: url("../img/header+hero/1920/svg/search-active.svg") center center no-repeat;
-  background-size: 83% 83%;
 }
 
 .header__bottom {
@@ -234,7 +239,7 @@ input::-webkit-search-results-decoration {
 }
 
 .header__container_bottom {
-  padding-top: 20px;
+  padding-top: 23px;
   padding-bottom: 16px;
 }
 
@@ -283,10 +288,6 @@ input::-webkit-search-results-decoration {
 .choices[data-type*=select-one]:hover::after {
   background-color: var(--hover-link-color);
 }
-
-/*.choices[data-type*=select-one]:active::after {
-  background-color: var(--click-link-color);
-}*/
 
 .choices[data-type*=select-one].is-open:after {
   margin-top: 0;
@@ -368,30 +369,88 @@ input::-webkit-search-results-decoration {
 
 .choices__list--dropdown .choices__item--selectable:not(:last-child) {
   margin-bottom: 20px;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 [data-value = "Тинторетто"] {
-  background-image: url("../img/header+hero/1920/png/select-bg-1.png")!important;
-  background-position: center center!important;
-  background-repeat: no-repeat!important;
+  background-image: url("../img/header+hero/1920/png/dropdown/select-bg-1.png")!important;
 }
 
 [data-value = "Фридрих"] {
-  background-image: url("../img/header+hero/1920/png/select-bg-2.png")!important;
-  background-position: center center!important;
-  background-repeat: no-repeat!important;
+  background-image: url("../img/header+hero/1920/png/dropdown/select-bg-2.png")!important;
 }
 
 [data-value = "Леонардо"] {
-  background-image: url("../img/header+hero/1920/png/select-bg-3.png")!important;
-  background-position: center center!important;
-  background-repeat: no-repeat!important;
+  background-image: url("../img/header+hero/1920/png/dropdown/select-bg-3.png")!important;
 }
 
 [data-value = "Верроккьо"] {
-  background-image: url("../img/header+hero/1920/png/select-bg-4.png")!important;
-  background-position: center center!important;
-  background-repeat: no-repeat!important;
+  background-image: url("../img/header+hero/1920/png/dropdown/select-bg-4.png")!important;
+}
+
+[data-value = "Моне"] {
+  background-image: url("../img/header+hero/1920/png/dropdown/select-bg-5.png")!important;
+}
+
+[data-value = "Сислей"] {
+  background-image: url("../img/header+hero/1920/png/dropdown/select-bg-6.png")!important;
+}
+
+[data-value = "Мане"] {
+  background-image: url("../img/header+hero/1920/png/dropdown/select-bg-7.png")!important;
+}
+
+[data-value = "Ренуар"] {
+  background-image: url("../img/header+hero/1920/png/dropdown/select-bg-8.png")!important;
+}
+
+[data-value = "Ван Гог"] {
+  background-image: url("../img/header+hero/1920/png/dropdown/select-bg-9.png")!important;
+}
+
+[data-value = "Сезанн"] {
+  background-image: url("../img/header+hero/1920/png/dropdown/select-bg-10.png")!important;
+}
+
+[data-value = "Гоген"] {
+  background-image: url("../img/header+hero/1920/png/dropdown/select-bg-11.png")!important;
+}
+
+[data-value = "Сёра"] {
+  background-image: url("../img/header+hero/1920/png/dropdown/select-bg-12.png")!important;
+}
+
+[data-value = "Кандинский"] {
+  background-image: url("../img/header+hero/1920/png/dropdown/select-bg-13.png")!important;
+}
+
+[data-value = "Маринетти"] {
+  background-image: url("../img/header+hero/1920/png/dropdown/select-bg-14.png")!important;
+}
+
+[data-value = "Малевич"] {
+  background-image: url("../img/header+hero/1920/png/dropdown/select-bg-15.png")!important;
+}
+
+[data-value = "Пикассо"] {
+  background-image: url("../img/header+hero/1920/png/dropdown/select-bg-16.png")!important;
+}
+
+[data-value = "Карра"] {
+  background-image: url("../img/header+hero/1920/png/dropdown/select-bg-17.png")!important;
+}
+
+[data-value = "Прателла"] {
+  background-image: url("../img/header+hero/1920/png/dropdown/select-bg-18.png")!important;
+}
+
+[data-value = "Северини"] {
+  background-image: url("../img/header+hero/1920/png/dropdown/select-bg-19.png")!important;
+}
+
+[data-value = "Балла"] {
+  background-image: url("../img/header+hero/1920/png/dropdown/select-bg-20.png")!important;
 }
 
 .choices__list--dropdown .choices__item--selectable:not([data-id = "1"]) {
@@ -413,13 +472,13 @@ input::-webkit-search-results-decoration {
   transition: opacity .3s ease;
 }
 
-/*.choices__list--dropdown .choices__item--selectable:not([data-id = "1"]):active::before {
+.choices__list--dropdown .choices__item--selectable:not([data-id = "1"]):active::before {
   opacity: .4;
 }
 
 .choices__list--dropdown .choices__item--selectable:not([data-id = "1"]):active {
   box-shadow: inset 0 0 0 2px #D1A9F0;
-}*/
+}
 
 .simplebar-track.simplebar-vertical {
   top: 0;
@@ -454,8 +513,9 @@ input::-webkit-search-results-decoration {
   transition: border-bottom-color .3s ease;
 }
 
-.search-field:hover + .search {
-  background: url("../img/header+hero/1920/svg/search-active.svg") center center no-repeat;
+.search-field:hover + .search > .search-icon > .search-icon__el-1,
+.search-field:hover + .search > .search-icon > .search-icon__el-2 {
+  fill: var(--search-icon-hover);
 }
 
 .search-field:focus::placeholder {
@@ -463,8 +523,9 @@ input::-webkit-search-results-decoration {
   border-bottom: 1px solid rgba(255, 255, 255, 0.85);
 }
 
-.search-field:focus + .search {
-  background: url("../img/header+hero/1920/svg/search-active.svg") center center no-repeat;
+.search-field:focus + .search > .search-icon > .search-icon__el-1,
+.search-field:focus + .search > .search-icon > .search-icon__el-2 {
+  fill: var(--search-icon-hover);
 }
 
 .hero {
@@ -510,7 +571,7 @@ input::-webkit-search-results-decoration {
   max-width: 100%;
   height: 100%; max-height: 100%;
   background: url("../img/header+hero/1920/png/birmingham-museums-trust-1.png") center center no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
   background-position-y: bottom;
   animation-name: zoom-slide, change-slide;
   animation-duration: 10s, 30s;
@@ -528,7 +589,7 @@ input::-webkit-search-results-decoration {
 .hero__block {
   position: relative;
   width: 600px;
-  padding-top: 96px;
+  margin-top: 96px;
   z-index: 10;
 }
 

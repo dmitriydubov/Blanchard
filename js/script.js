@@ -5,12 +5,12 @@ document.addEventListener('DOMContentLoaded', () => {
   burger.addEventListener('click', () => {
     burger.classList.toggle('burger-active');
 
-    /* show header-menu*/
+    /*show header-menu*/
     document.querySelector('.header-nav').classList.toggle('nav-active');
     document.querySelector('.index').classList.toggle('lock');
   });
 
-  /* show search-form*/
+  /*show search-form*/
   document.querySelector('.search_top').addEventListener('click', () => {
     document.querySelector('.search_top').classList.add('search_top-inactive');
     document.querySelector('.search-form').classList.toggle('search-form-active');
@@ -28,6 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
       searchChoices: false,
       shouldSort: false
     });
+
+    const customSelector = document.querySelector('.select');
+    const ariaLabel = customSelector.getAttribute('aria-label');
+    customSelector.closest('.choices').setAttribute('aria-label', ariaLabel);
   });
 
   /*custom scrollbar in select-menu*/
